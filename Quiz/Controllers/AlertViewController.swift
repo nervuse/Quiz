@@ -10,15 +10,23 @@ import UIKit
 class AlertViewController: UIViewController {
 
     let alertView = AlertView()
-
     var alertImage = UIImage()
     var titleText = String()
     var messageText = String()
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupView()
+        setValues()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        preferredContentSize.height = alertView.messageLabel.frame.size.height + alertView.messageLabel.frame.origin.y + 30
+    }
+
+    private func setupView() {
         self.view.addSubview(alertView)
 
         alertView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,13 +37,6 @@ class AlertViewController: UIViewController {
             alertView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             alertView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             alertView.bottomAnchor.constraint(equalTo: view.bottomAnchor)])
-
-        setValues()
-    }
-
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        preferredContentSize.height = alertView.messageLabel.frame.size.height + alertView.messageLabel.frame.origin.y + 30
     }
 
     private func setValues() {
@@ -43,8 +44,4 @@ class AlertViewController: UIViewController {
         alertView.titleLabel.text = titleText
         alertView.messageLabel.text = messageText
     }
-
-    
-
-
 }

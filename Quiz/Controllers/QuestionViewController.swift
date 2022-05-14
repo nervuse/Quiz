@@ -14,6 +14,12 @@ class QuestionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        setupView()
+        updateUI()
+    }
+
+    private func setupView() {
         view.addSubview(questionFile)
         questionFile.oneButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
         questionFile.twoButton.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -27,8 +33,6 @@ class QuestionViewController: UIViewController {
             questionFile.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             questionFile.topAnchor.constraint(equalTo: view.topAnchor)
         ])
-
-        updateUI()
     }
 
     override func viewWillAppear(_ animated: Bool) {

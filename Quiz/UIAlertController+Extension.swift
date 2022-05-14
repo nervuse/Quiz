@@ -28,5 +28,4 @@ extension UIAlertController {
         viewController.messageText = message
         setValue(viewController, forKey: "contentViewController")
     }
-
 }

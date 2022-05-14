@@ -86,7 +86,7 @@ class QuestionFile: UIView {
         let leadingImageViewConstraint = self.imageView.leadingAnchor.constraint(equalTo: self.leadingAnchor)
         let trailingImageViewConstraint = self.imageView.trailingAnchor.constraint(equalTo: self.trailingAnchor)
         let bottomImageViewConstraint = self.imageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-  let topStackViewConstraint = self.stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
+        let topStackViewConstraint = self.stackView.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor)
         let leadingStackViewConstraint = self.stackView.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16)
         let trailingStackViewConstraint = self.stackView.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         let bottomStackViewConstraint = self.stackView.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -20)

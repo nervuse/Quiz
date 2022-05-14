@@ -56,14 +56,4 @@ struct QuizBrain {
         let progress = Float(questionNumber) / Float(quiz.count - 1)
         return progress
     }
-
-//    mutating func nextQuestion() {
-//        if questionNumber < quiz.count - 1 {
-//            questionNumber += 1
-//        } else {
-//            questionNumber = 0
-//            score = 0
-//        }
-//    }
-
 }
